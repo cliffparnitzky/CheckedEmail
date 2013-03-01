@@ -1,5 +1,5 @@
-Contao CheckedEmail Extension
-=============================
+Contao Extension: CheckedEmail
+==============================
 
 Provides two textfields for forms for double entering a e-mail address and checking for equality.
 
@@ -23,7 +23,7 @@ Compatibility
 -------------
 
 - min. version: Contao 2.9.5
-- max. version: Contao 2.11.6
+- max. version: Contao 2.11.x
 
 
 Dependency
