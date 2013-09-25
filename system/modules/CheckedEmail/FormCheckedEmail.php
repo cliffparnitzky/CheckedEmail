@@ -108,17 +108,18 @@ class FormCheckedEmail extends Widget
 	protected function validator($varInput)
 	{
 		$this->blnSubmitInput = false;
-
+		
 		if (!strlen($varInput) && (strlen($this->varValue) || !$this->mandatory))
 		{
 			return '';
 		}
-
+		
 		if ($varInput != $this->getPost($this->strName . '_confirm'))
 		{
 			$this->addError($GLOBALS['TL_LANG']['ERR']['CheckedEmailError']);
 		}
 
+		$varInput = $this->idnaEncodeEmail($varInput);
 		$varInput = parent::validator($varInput);
 
 		if (!$this->hasErrors())
@@ -136,7 +137,10 @@ class FormCheckedEmail extends Widget
 	 */
 	public function generate()
 	{
-		return sprintf('<input type="text" name="%s" id="ctrl_%s" class="text%s" value="%s"%s />',
+		// Hide the Punycode format (see #2750)
+		$this->varValue = $this->idnaDecode($this->varValue);
+		
+		return sprintf('<input type="email" name="%s" id="ctrl_%s" class="text%s" value="%s"%s />',
 						$this->strName,
 						$this->strId,
 						(strlen($this->strClass) ? ' ' . $this->strClass : ''),
@@ -166,7 +170,10 @@ class FormCheckedEmail extends Widget
 	 */
 	public function generateConfirmation()
 	{
-		return sprintf('<input type="text" name="%s_confirm" id="ctrl_%s_confirm" class="text confirm%s" value="%s"%s />',
+		// Hide the Punycode format (see #2750)
+		$this->varValue = $this->idnaDecode($this->varValue);
+		
+		return sprintf('<input type="email" name="%s_confirm" id="ctrl_%s_confirm" class="text confirm%s" value="%s"%s />',
 						$this->strName,
 						$this->strId,
 						(strlen($this->strClass) ? ' ' . $this->strClass : ''),
