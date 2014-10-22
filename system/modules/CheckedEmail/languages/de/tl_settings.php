@@ -28,8 +28,13 @@
  */
 
 /**
- * Define name and tooltip for preferences (inactive modules)
+ * Fields
  */
-$GLOBALS['TL_LANG']['MOD']['CheckedEmail'] = array('E-Mail Feld mit Bestätigung für Formulare', 'Stellt zwei Textfelder für Formulare zur Verfügung zur doppleten Eingabe einer E-Mail-Adresse und Prüfung auf Gleichheit.');
+$GLOBALS['TL_LANG']['tl_settings']['checkedEmailForMembers'] = array('E-Mail Feld mit Bestätigung für Mitglieder', 'E-Mail Feld mit Bestätigung für Mitglieder aktivieren.<br/><br/>Im Backend bleibt das Feld ein Textfeld. Im Frontend wird das E-Mail Feld für Mitglieder mit Bestätigung dargestellt. Das betrifft u.a. die Module <i>Persönliche Daten</i> und <i>Registrierung</i>.');
+
+/**
+ * Legends
+ */
+$GLOBALS['TL_LANG']['tl_settings']['checkedEmail_legend'] = 'E-Mail Feld mit Bestätigung';
 
 ?>

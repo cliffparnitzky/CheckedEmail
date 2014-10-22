@@ -26,10 +26,13 @@
  * @package    CheckedEmail
  * @license    LGPL
  */
-
+ 
 /**
- * Define name and tooltip for preferences (inactive modules)
+ * Modify email field for members
  */
-$GLOBALS['TL_LANG']['MOD']['CheckedEmail'] = array('E-Mail Feld mit Bestätigung für Formulare', 'Stellt zwei Textfelder für Formulare zur Verfügung zur doppleten Eingabe einer E-Mail-Adresse und Prüfung auf Gleichheit.');
+if ($GLOBALS['TL_CONFIG']['checkedEmailForMembers'])
+{
+	$GLOBALS['TL_DCA']['tl_member']['fields']['email']['inputType'] = "checkedEmail";
+}
 
 ?>

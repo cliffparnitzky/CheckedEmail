@@ -28,8 +28,17 @@
  */
 
 /**
- * Define name and tooltip for preferences (inactive modules)
+ * Add to palette
  */
-$GLOBALS['TL_LANG']['MOD']['CheckedEmail'] = array('E-Mail Feld mit Bestätigung für Formulare', 'Stellt zwei Textfelder für Formulare zur Verfügung zur doppleten Eingabe einer E-Mail-Adresse und Prüfung auf Gleichheit.');
+$GLOBALS['TL_DCA']['tl_settings']['palettes']['default'] .= ';{checkedEmail_legend},checkedEmailForMembers;';
+
+/**
+ * Add fields
+ */
+$GLOBALS['TL_DCA']['tl_settings']['fields']['checkedEmailForMembers'] = array
+(
+	'label'     => &$GLOBALS['TL_LANG']['tl_settings']['checkedEmailForMembers'],
+	'inputType' => 'checkbox'
+); 
 
 ?>

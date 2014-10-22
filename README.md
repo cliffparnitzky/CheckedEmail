@@ -3,6 +3,8 @@ Contao Extension: CheckedEmail
 
 Provides two textfields for forms for double entering a e-mail address and checking for equality.
 
+Also adds the option to activate e-mail field with confirmation for members (affects among others the modules `Personal data` and `Registration`).
+
 
 Installation
 ------------
