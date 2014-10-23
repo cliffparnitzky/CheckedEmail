@@ -1,3 +1,4 @@
+[![Latest Version tagged](http://img.shields.io/github/tag/cliffparnitzky/CheckedEmail.svg?style=flat)](https://github.com/cliffparnitzky/CheckedEmail/tags)
 [![Latest Version on Packagist](http://img.shields.io/packagist/v/cliffparnitzky/checked-email.svg?style=flat)](https://packagist.org/packages/cliffparnitzky/checked-email)
 [![Installations via composer per month](http://img.shields.io/packagist/dm/cliffparnitzky/checked-email.svg?style=flat)](https://packagist.org/packages/cliffparnitzky/checked-email)
 [![Installations via composer total](http://img.shields.io/packagist/dt/cliffparnitzky/checked-email.svg?style=flat)](https://packagist.org/packages/cliffparnitzky/checked-email)
