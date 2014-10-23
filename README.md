@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/cliffparnitzky/CheckedEmail.svg)](https://travis-ci.org/cliffparnitzky/CheckedEmail)
-[![Latest Version tagged](http://img.shields.io/github/tag/cliffparnitzky/checked-email.svg)](https://github.com/cliffparnitzky/checked-email/tags)
+[![Latest Version tagged](http://img.shields.io/github/tag/cliffparnitzky/CheckedEmail.svg)](https://github.com/cliffparnitzky/CheckedEmail/tags)
 [![Latest Version on Packagist](http://img.shields.io/packagist/v/cliffparnitzky/checked-email.svg)](https://packagist.org/packages/cliffparnitzky/checked-email)
 [![Installations via composer per month](http://img.shields.io/packagist/dm/cliffparnitzky/checked-email.svg)](https://packagist.org/packages/cliffparnitzky/checked-email)
 
