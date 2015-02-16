@@ -13,9 +13,9 @@ Also adds the option to activate e-mail field with confirmation for members (act
 Installation
 ------------
 
-The extension can be installed using the Contao extension manager in the Contao backend.
+Install the extension via composer: [cliffparnitzky/checked-email](https://packagist.org/packages/cliffparnitzky/checked-email).
 
-Or install it via [composer](https://packagist.org/packages/cliffparnitzky/checked-email).
+If you prefer to install it manually, download the latest release here: https://github.com/cliffparnitzky/CheckedEmail/releases
 
 
 Tracker
@@ -27,8 +27,8 @@ https://github.com/cliffparnitzky/CheckedEmail/issues
 Compatibility
 -------------
 
-- min. version: Contao 2.9.5
-- max. version: Contao 3.3.x
+- min. Contao version: >= 3.2.0
+- max. Contao version: <  3.5.0
 
 
 Dependency

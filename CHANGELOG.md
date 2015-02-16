@@ -2,6 +2,10 @@
 Contao Extension "CheckedEmail"
 ===============================
 
+Version 1.2.1 (2015-02-16)
+--------------------------
+- setting new compatibility versions and conflict versions
+
 Version 1.2.0 (2014-10-22)
 --------------------------
 - adding option to activate e-mail field with confirmation for members (activation in system settings, affects among others the modules `Personal data` and `Registration`)
