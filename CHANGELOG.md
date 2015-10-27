@@ -2,6 +2,10 @@
 Contao Extension "CheckedEmail"
 ===============================
 
+Version 1.2.2 (2015-06-23)
+--------------------------
+- Contao 3.5 ready
+
 Version 1.2.1 (2015-02-16)
 --------------------------
 - setting new compatibility versions and conflict versions

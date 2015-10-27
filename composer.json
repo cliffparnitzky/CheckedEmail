@@ -1,7 +1,7 @@
 {
 	"name":"cliffparnitzky/checked-email",
 	"description":"Provides two textfields for forms for double entering a e-mail address and checking for equality. Also adds the option to activate e-mail field with confirmation for members (affects among others the modules `Personal data` and `Registration`).",
-	"keywords":["contao", "form", "form field", "e-mail", "e-mail addresss", "check for equality"],
+	"keywords":["contao", "form", "form field", "e-mail", "e-mail address", "check for equality"],
 	"type":"contao-module",
 	"license":"LGPL-3.0+",
 	"authors":[
@@ -18,8 +18,8 @@
 	},
 	"require":{
 		"php":">=5.3",
-		"contao/core":">=3.2.0,<3.5",
-		"contao-community-alliance/composer-installer":"*"
+		"contao/core":">=3.2.0,<3.6",
+		"contao-community-alliance/composer-plugin":"~2.0"
 	},
 	"conflict": {
 		"contao/core":"3.4.0,3.4.1,3.4.2"
