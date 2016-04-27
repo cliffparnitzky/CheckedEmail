@@ -3,11 +3,9 @@
 /**
  * Contao Open Source CMS
  *
- * Copyright (c) 2005-2014 Leo Feyer
+ * Copyright (c) 2005-2016 Leo Feyer
  *
- * @package CheckedEmail
- * @link    https://contao.org
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ * @license LGPL-3.0+
  */
 
 
@@ -16,7 +14,8 @@
  */
 ClassLoader::addClasses(array
 (
-	'FormCheckedEmail' => 'system/modules/CheckedEmail/FormCheckedEmail.php',
+	// Forms
+	'FormCheckedEmail' => 'system/modules/CheckedEmail/forms/FormCheckedEmail.php',
 ));
 
 

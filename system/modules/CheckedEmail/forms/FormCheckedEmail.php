@@ -45,10 +45,24 @@ class FormCheckedEmail extends Widget
 	protected $blnSubmitInput = true;
 
 	/**
+	 * Add a for attribute
+	 *
+	 * @var boolean
+	 */
+	protected $blnForAttribute = true;
+
+	/**
 	 * Template
 	 * @var string
 	 */
 	protected $strTemplate = 'form_checkedEmail';
+
+	/**
+	 * The CSS class prefix
+	 *
+	 * @var string
+	 */
+	protected $strPrefix = 'widget widget-text widget-checked-email'; 
 
 	/**
 	 * Always decode entities
