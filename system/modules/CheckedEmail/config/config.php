@@ -30,10 +30,7 @@
 /**
  * Back end form fields
  */
-if ($GLOBALS['TL_CONFIG']['checkedEmailForMembers'])
-{
-	$GLOBALS['BE_FFL']['checkedEmail'] = 'TextField';
-}
+$GLOBALS['BE_FFL']['checkedEmail'] = 'TextField';
 
 /**
  * Front end form fields
