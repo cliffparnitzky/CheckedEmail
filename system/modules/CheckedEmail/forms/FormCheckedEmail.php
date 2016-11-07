@@ -85,29 +85,28 @@ class FormCheckedEmail extends Widget
 		switch ($strKey)
 		{
 			case 'maxlength':
-				$this->arrAttributes[$strKey] = ($varValue > 0) ? $varValue : '';
-				break;
-
-			case 'mandatory':
-				if (VERSION == 2.9 || VERSION == 2.10) {
-					$this->arrConfiguration['mandatory'] = $varValue ? true : false;
-				} else {
-					if ($varValue)
-					{
-						$this->arrAttributes['required'] = 'required';
-					}
-					else
-					{
-						unset($this->arrAttributes['required']);
-					}
-					parent::__set($strKey, $varValue);
+				if ($varValue > 0)
+				{
+					$this->arrAttributes['maxlength'] = $varValue;
 				}
-				break;
+				break; 
+			
+			case 'mandatory':
+				if ($varValue)
+				{
+					$this->arrAttributes['required'] = 'required';
+				}
+				else
+				{
+					unset($this->arrAttributes['required']);
+				}
+				parent::__set($strKey, $varValue);
+				break; 
 			
 			case 'placeholder':
 				$this->arrAttributes['placeholder'] = $varValue;
 				break;
-				
+			
 			default:
 				parent::__set($strKey, $varValue);
 				break;
@@ -144,7 +143,21 @@ class FormCheckedEmail extends Widget
 
 		return '';
 	}
+	
+	/**
+	 * Parse the template file and return it as string
+	 *
+	 * @param array $arrAttributes An optional attributes array
+	 *
+	 * @return string The template markup
+	 */
+	public function parse($arrAttributes=null)
+	{
+		$this->confirmLabel = sprintf($GLOBALS['TL_LANG']['MSC']['CheckedEmailConfirmation'], $this->strLabel);
 
+		return parent::parse($arrAttributes);
+	}
+	
 	/**
 	 * Generate the widget and return it as string
 	 * @return string
