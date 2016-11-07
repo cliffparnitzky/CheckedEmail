@@ -2,6 +2,12 @@
 Contao Extension "CheckedEmail"
 ===============================
 
+Version 1.3.0 (2016-11-08)
+--------------------------
+- Removing old Contao 2.x code
+- Generally define `checkedEmail` as backend form field (see #3)
+- Remove Contao 3.2 compatibility and update templates to Contao 3.3+ default (uses correct HTML structure)
+
 Version 1.2.2 (2015-06-23)
 --------------------------
 - Contao 3.5 ready
