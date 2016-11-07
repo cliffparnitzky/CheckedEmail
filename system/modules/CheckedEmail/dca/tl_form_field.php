@@ -1,8 +1,8 @@
-<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
+<?php
 
 /**
  * Contao Open Source CMS
- * Copyright (C)  2005-2014 Leo Feyer
+ * Copyright (C)  2005-2016 Leo Feyer
  *
  * Formerly known as TYPOlight Open Source CMS.
  *
@@ -21,7 +21,7 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2012-2014
+ * @copyright  Cliff Parnitzky 2012-2016
  * @author     Cliff Parnitzky
  * @package    CheckedEmail
  * @license    LGPL
@@ -30,10 +30,6 @@
 /**
  * Add a palette to tl_form_field
  */
-if (VERSION == 2.9 || VERSION == 2.10) {
-	$GLOBALS['TL_DCA']['tl_form_field']['palettes']['checkedEmail'] = '{type_legend},type,name,label;{fconfig_legend},mandatory,maxlength;{expert_legend:hide},value,class,accesskey;{submit_legend},addSubmit';
-} else {
-	$GLOBALS['TL_DCA']['tl_form_field']['palettes']['checkedEmail'] = '{type_legend},type,name,label;{fconfig_legend},mandatory,placeholder;{expert_legend:hide},class,maxlength,accesskey,tabindex,value;{submit_legend},addSubmit';
-}
+$GLOBALS['TL_DCA']['tl_form_field']['palettes']['checkedEmail'] = '{type_legend},type,name,label;{fconfig_legend},mandatory,placeholder;{expert_legend:hide},class,maxlength,accesskey,tabindex,value;{submit_legend},addSubmit';
 
 ?>
