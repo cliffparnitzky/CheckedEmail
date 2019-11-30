@@ -30,6 +30,6 @@
 /**
  * Add a palette to tl_form_field
  */
-$GLOBALS['TL_DCA']['tl_form_field']['palettes']['checkedEmail'] = '{type_legend},type,name,label;{fconfig_legend},mandatory,placeholder;{expert_legend:hide},class,value,minlength,maxlength,accesskey,tabindex;{template_legend:hide},customTpl;{invisible_legend:hide},invisible',
+$GLOBALS['TL_DCA']['tl_form_field']['palettes']['checkedEmail'] = '{type_legend},type,name,label;{fconfig_legend},mandatory,placeholder;{expert_legend:hide},class,value,minlength,maxlength,accesskey,tabindex;{template_legend:hide},customTpl;{invisible_legend:hide},invisible';
 
 ?>
