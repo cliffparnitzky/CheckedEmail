@@ -33,12 +33,12 @@
 $GLOBALS['BE_FFL']['checkedEmail'] = 'TextField';
 if ($GLOBALS['TL_CONFIG']['checkedEmailForMembers'])
 {
-	$GLOBALS['BE_FFL']['checkedEmail'] = 'CheckedEmail';
+	$GLOBALS['BE_FFL']['checkedEmail'] = 'CliffParnitzky/CheckedEmail';
 }
 
 /**
  * Front end form fields
  */
-$GLOBALS['TL_FFL']['checkedEmail'] = 'FormCheckedEmail';
+$GLOBALS['TL_FFL']['checkedEmail'] = 'CliffParnitzky/FormCheckedEmail';
 
 ?>
