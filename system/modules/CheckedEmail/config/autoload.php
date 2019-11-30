@@ -24,5 +24,5 @@ ClassLoader::addClasses(array
  */
 TemplateLoader::addFiles(array
 (
-	'form_checkedEmail' => 'system/modules/CheckedEmail/templates',
+	'form_checkedEmail' => 'system/modules/CheckedEmail/templates/forms',
 ));
