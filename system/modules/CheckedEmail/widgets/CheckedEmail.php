@@ -30,7 +30,7 @@
 
 namespace CliffParnitzky;
 
-use FormCheckdEmail;
+use CliffParnitzky\FormCheckdEmail;
 
 /**
  * Class FormCheckedEmail
