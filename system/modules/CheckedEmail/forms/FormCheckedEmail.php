@@ -28,6 +28,10 @@
  * @filesource FormPassword.php
  */
 
+namespace CliffParnitzky;
+
+use Contao\Widget
+
 /**
  * Class FormCheckedEmail
  *

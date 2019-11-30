@@ -8,6 +8,14 @@
  * @license LGPL-3.0+
  */
 
+/**
+ * Register the namespaces
+ */
+ClassLoader::addNamespaces(array
+(
+  'CliffParnitzky',
+));
+
 
 /**
  * Register the classes
@@ -15,9 +23,9 @@
 ClassLoader::addClasses(array
 (
 	// Forms
-	'FormCheckedEmail' => 'system/modules/CheckedEmail/forms/FormCheckedEmail.php',
+	'CliffParnitzky/FormCheckedEmail' => 'system/modules/CheckedEmail/forms/FormCheckedEmail.php',
 	// Widgets
-	'CheckedEmail' => 'system/modules/CheckedEmail/widgets/CheckedEmail.php',
+	'CliffParnitzky/CheckedEmail' => 'system/modules/CheckedEmail/widgets/CheckedEmail.php',
 ));
 
 

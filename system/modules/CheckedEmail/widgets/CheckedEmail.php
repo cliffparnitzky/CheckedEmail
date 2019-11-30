@@ -28,6 +28,10 @@
  * @filesource Password.php
  */
 
+namespace CliffParnitzky;
+
+use CliffParnitzky/FormCheckdEmail;
+
 /**
  * Class FormCheckedEmail
  *
