@@ -30,7 +30,7 @@
 
 namespace CliffParnitzky;
 
-use CliffParnitzky\FormCheckdEmail;
+use CliffParnitzky\FormCheckedEmail;
 
 /**
  * Class FormCheckedEmail
@@ -40,7 +40,7 @@ use CliffParnitzky\FormCheckdEmail;
  * @author     Cliff Parnitzky
  * @package    Widget
  */
-class CheckedEmail extends FormCheckdEmail
+class CheckedEmail extends FormCheckedEmail
 {
 	/**
 	 * Template
