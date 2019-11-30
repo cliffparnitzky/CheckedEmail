@@ -3,7 +3,7 @@
 /**
  * Contao Open Source CMS
  *
- * Copyright (c) 2005-2016 Leo Feyer
+ * Copyright (c) 2005-2019 Leo Feyer
  *
  * @license LGPL-3.0+
  */
@@ -16,6 +16,8 @@ ClassLoader::addClasses(array
 (
 	// Forms
 	'FormCheckedEmail' => 'system/modules/CheckedEmail/forms/FormCheckedEmail.php',
+	// Widgets
+	'CheckedEmail' => 'system/modules/CheckedEmail/widgets/CheckedEmail.php',
 ));
 
 
@@ -24,5 +26,6 @@ ClassLoader::addClasses(array
  */
 TemplateLoader::addFiles(array
 (
-	'form_checkedEmail' => 'system/modules/CheckedEmail/templates/forms',
+	'be_widget_checkedEmail' => 'system/modules/CheckedEmail/templates/backend',
+	'form_checkedEmail'      => 'system/modules/CheckedEmail/templates/forms',
 ));
