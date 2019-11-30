@@ -30,7 +30,7 @@
 
 namespace CliffParnitzky;
 
-use Contao\Widget
+use Contao\Widget;
 
 /**
  * Class FormCheckedEmail
