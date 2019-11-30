@@ -30,6 +30,7 @@
 
 namespace CliffParnitzky;
 
+use Contao\StringUtil;
 use Contao\Widget;
 
 /**
