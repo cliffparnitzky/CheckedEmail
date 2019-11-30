@@ -162,7 +162,7 @@ class FormCheckedEmail extends Widget
 	 * Generate the widget and return it as string
 	 * @return string
 	 */
-	public function generate()
+	/*public function generate()
 	{
 		// Hide the Punycode format (see #2750)
 		$this->varValue = $this->idnaDecode($this->varValue);
@@ -173,14 +173,14 @@ class FormCheckedEmail extends Widget
 						(strlen($this->strClass) ? ' ' . $this->strClass : ''),
 						specialchars($this->varValue),
 						$this->getAttributes()) . $this->addSubmit();
-	}
+	}*/
 
 	/**
 	 * Generate the label of the confirmation field and return it as string
 	 * @param array
 	 * @return string
 	 */
-	public function generateConfirmationLabel()
+	/*public function generateConfirmationLabel()
 	{
 		return sprintf('<label for="ctrl_%s_confirm" class="confirm%s">%s%s%s</label>',
 						$this->strId,
@@ -188,14 +188,14 @@ class FormCheckedEmail extends Widget
 						($this->required ? '<span class="invisible">'.$GLOBALS['TL_LANG']['MSC']['mandatory'].'</span> ' : ''),
 						sprintf($GLOBALS['TL_LANG']['MSC']['CheckedEmailConfirmation'], $this->strLabel),
 						($this->required ? '<span class="mandatory">*</span>' : ''));
-	}
+	}*/
 
 	/**
 	 * Generate the widget and return it as string
 	 * @param array
 	 * @return string
 	 */
-	public function generateConfirmation()
+	/*public function generateConfirmation()
 	{
 		// Hide the Punycode format (see #2750)
 		$this->varValue = $this->idnaDecode($this->varValue);
@@ -206,7 +206,7 @@ class FormCheckedEmail extends Widget
 						(strlen($this->strClass) ? ' ' . $this->strClass : ''),
 						specialchars($this->varValue),
 						$this->getAttributes());
-	}
+	}*/
 }
 
 ?>
