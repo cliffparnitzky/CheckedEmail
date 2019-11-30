@@ -41,9 +41,4 @@ if ($GLOBALS['TL_CONFIG']['checkedEmailForMembers'])
  */
 $GLOBALS['TL_FFL']['checkedEmail'] = 'FormCheckedEmail';
 
-/**
- * Adding field type to storabel fields.
- */
-$GLOBALS['EFG']['storable_fields'][] = 'checkedEmail';
-
 ?>
