@@ -160,53 +160,64 @@ class FormCheckedEmail extends Widget
 	
 	/**
 	 * Generate the widget and return it as string
+	 *
 	 * @return string
 	 */
-	/*public function generate()
+	public function generate()
 	{
 		// Hide the Punycode format (see #2750)
 		$this->varValue = $this->idnaDecode($this->varValue);
 		
-		return sprintf('<input type="email" name="%s" id="ctrl_%s" class="text%s" value="%s"%s />',
-						$this->strName,
-						$this->strId,
-						(strlen($this->strClass) ? ' ' . $this->strClass : ''),
-						specialchars($this->varValue),
-						$this->getAttributes()) . $this->addSubmit();
-	}*/
+		return sprintf(
+			'<input type="email" name="%s" id="ctrl_%s" class="text%s" value="%s"%s%s',
+			$this->strName,
+			$this->strId,
+			($this->strClass ? ' ' . $this->strClass : ''),
+			StringUtil::specialchars($this->value),
+			$this->getAttributes(),
+			$this->strTagEnding
+		);
+	}
 
 	/**
 	 * Generate the label of the confirmation field and return it as string
-	 * @param array
+	 *
 	 * @return string
 	 */
-	/*public function generateConfirmationLabel()
+	public function generateConfirmationLabel()
 	{
-		return sprintf('<label for="ctrl_%s_confirm" class="confirm%s">%s%s%s</label>',
-						$this->strId,
-						(strlen($this->strClass) ? ' ' . $this->strClass : ''),
-						($this->required ? '<span class="invisible">'.$GLOBALS['TL_LANG']['MSC']['mandatory'].'</span> ' : ''),
-						sprintf($GLOBALS['TL_LANG']['MSC']['CheckedEmailConfirmation'], $this->strLabel),
-						($this->required ? '<span class="mandatory">*</span>' : ''));
-	}*/
+		return sprintf(
+			'<label for="ctrl_%s_confirm" class="confirm%s">%s%s%s</label>',
+			$this->strId,
+			($this->strClass ? ' ' . $this->strClass : ''),
+			($this->mandatory ? '<span class="invisible">' . $GLOBALS['TL_LANG']['MSC']['mandatory'] . ' </span>' : ''),
+			sprintf($GLOBALS['TL_LANG']['MSC']['CheckedEmailConfirmation'], $this->strLabel),
+			($this->mandatory ? '<span class="mandatory">*</span>' : '')
+		);
+	}
 
 	/**
 	 * Generate the widget and return it as string
-	 * @param array
+	 *
 	 * @return string
 	 */
-	/*public function generateConfirmation()
+	public function generateConfirmation()
 	{
 		// Hide the Punycode format (see #2750)
 		$this->varValue = $this->idnaDecode($this->varValue);
 		
-		return sprintf('<input type="email" name="%s_confirm" id="ctrl_%s_confirm" class="text confirm%s" value="%s"%s />',
-						$this->strName,
-						$this->strId,
-						(strlen($this->strClass) ? ' ' . $this->strClass : ''),
-						specialchars($this->varValue),
-						$this->getAttributes());
-	}*/
+		return sprintf(
+			'<input type="email" name="%s_confirm" id="ctrl_%s_confirm" class="tl_text confirm%s" value="%s"%s%s',// onfocus="Backend.getScrollOffset()">%s',
+			$this->strName,
+			$this->strId,
+			($this->strClass ? ' ' . $this->strClass : ''),
+			StringUtil::specialchars($this->value),
+			$this->getAttributes(),
+			$this->strTagEnding
+			
+//			((isset($GLOBALS['TL_LANG']['MSC']['confirm'][1]) && Config::get('showHelp')) ? "\n  " . '<p class="tl_help tl_tip">' . $GLOBALS['TL_LANG']['MSC']['confirm'][1] . '</p>' : '')
+		);
+	}
 }
 
 ?>
