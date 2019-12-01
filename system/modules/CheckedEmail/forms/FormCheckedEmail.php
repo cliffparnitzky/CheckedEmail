@@ -144,10 +144,10 @@ class FormCheckedEmail extends Widget
 		if (!$this->hasErrors())
 		{
 			$this->blnSubmitInput = true;
-			return $varInput;
+			
 		}
 
-		return '';
+		return $varInput;
 	}
 	
 	/**
@@ -218,7 +218,7 @@ class FormCheckedEmail extends Widget
 			$this->strName,
 			$this->strId,
 			($this->strClass ? ' ' . $this->strClass : ''),
-			StringUtil::specialchars($this->value),
+			'',
 			$this->getAttributes(),
 			((isset($GLOBALS['TL_LANG']['MSC']['confirm'][1]) && Config::get('showHelp')) ? "\n  " . '<p class="tl_help tl_tip">' . $GLOBALS['TL_LANG']['MSC']['confirm'][1] . '</p>' : '')
 		);
