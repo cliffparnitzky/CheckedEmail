@@ -47,13 +47,6 @@ class CheckedEmail extends FormCheckedEmail
 	 * @var string
 	 */
 	protected $strTemplate = 'be_widget_checkedEmail';
-	
-	/**
-	 * The CSS class prefix
-	 *
-	 * @var string
-	 */
-	protected $strPrefix = ''; 
 
 	/**
 	 * Always use raw request data.
