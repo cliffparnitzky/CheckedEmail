@@ -174,13 +174,13 @@ class FormCheckedEmail extends Widget
 		$this->varValue = $this->idnaDecode($this->varValue);
 		
 		return sprintf(
-			'<input type="email" name="%s" id="ctrl_%s" class="text%s" value="%s"%s%s',
+			'<input type="email" name="%s" id="ctrl_%s" class="tl_text%s" value="%s"%s onfocus="Backend.getScrollOffset()">%s',
 			$this->strName,
 			$this->strId,
 			($this->strClass ? ' ' . $this->strClass : ''),
 			StringUtil::specialchars($this->value),
 			$this->getAttributes(),
-			$this->strTagEnding
+			((isset($GLOBALS['TL_LANG']['MSC']['confirm'][1]) && Config::get('showHelp')) ? "\n  " . '<p class="tl_help tl_tip">' . $GLOBALS['TL_LANG']['MSC']['confirm'][1] . '</p>' : '')
 		);
 	}
 
@@ -212,15 +212,13 @@ class FormCheckedEmail extends Widget
 		$this->varValue = $this->idnaDecode($this->varValue);
 		
 		return sprintf(
-			'<input type="email" name="%s_confirm" id="ctrl_%s_confirm" class="tl_text confirm%s" value="%s"%s%s',// onfocus="Backend.getScrollOffset()">%s',
+			'<input type="email" name="%s_confirm" id="ctrl_%s_confirm" class="tl_text confirm%s" value="%s"%s onfocus="Backend.getScrollOffset()">%s',
 			$this->strName,
 			$this->strId,
 			($this->strClass ? ' ' . $this->strClass : ''),
 			StringUtil::specialchars($this->value),
 			$this->getAttributes(),
-			$this->strTagEnding
-			
-//			((isset($GLOBALS['TL_LANG']['MSC']['confirm'][1]) && Config::get('showHelp')) ? "\n  " . '<p class="tl_help tl_tip">' . $GLOBALS['TL_LANG']['MSC']['confirm'][1] . '</p>' : '')
+			((isset($GLOBALS['TL_LANG']['MSC']['confirm'][1]) && Config::get('showHelp')) ? "\n  " . '<p class="tl_help tl_tip">' . $GLOBALS['TL_LANG']['MSC']['confirm'][1] . '</p>' : '')
 		);
 	}
 }
