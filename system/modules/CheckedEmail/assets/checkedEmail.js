@@ -1,7 +1,7 @@
 window.addEvent('domready', function() {
-	var checkedEmail = $$('.checkedEmail');
+	var checkedEmailFields = $$('.checkedEmail');
 	
-	Array.each(submissionAreas, function(element){
-		element.removeClass('widget');
+	Array.each(checkedEmailFields, function(field){
+		field.removeClass('widget');
 	});
 });

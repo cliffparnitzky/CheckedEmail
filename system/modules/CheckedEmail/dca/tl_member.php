@@ -33,7 +33,7 @@
 if ($GLOBALS['TL_CONFIG']['checkedEmailForMembers'])
 {
 	$GLOBALS['TL_DCA']['tl_member']['fields']['email']['inputType'] = "checkedEmail";
-	$GLOBALS['TL_DCA']['tl_member']['fields']['email']['eval']['tl_class'] = "clr";
+	$GLOBALS['TL_DCA']['tl_member']['fields']['email']['eval']['tl_class'] = "clr checkedEmail";
 }
 
 ?>
