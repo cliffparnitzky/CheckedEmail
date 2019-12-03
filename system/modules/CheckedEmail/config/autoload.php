@@ -23,11 +23,14 @@ ClassLoader::addNamespaces(array
  */
 ClassLoader::addClasses(array
 (
+	// Classes
+	'CliffParnitzky\CheckedEmailHookImpl' => 'system/modules/CheckedEmail/classes/CheckedEmailHookImpl.php',
+
 	// Forms
-	'CliffParnitzky\FormCheckedEmail' => 'system/modules/CheckedEmail/forms/FormCheckedEmail.php',
+	'CliffParnitzky\FormCheckedEmail'     => 'system/modules/CheckedEmail/forms/FormCheckedEmail.php',
 
 	// Widgets
-	'CliffParnitzky\CheckedEmail'     => 'system/modules/CheckedEmail/widgets/CheckedEmail.php',
+	'CliffParnitzky\CheckedEmail'         => 'system/modules/CheckedEmail/widgets/CheckedEmail.php',
 ));
 
 
