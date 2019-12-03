@@ -33,8 +33,8 @@
 $GLOBALS['BE_FFL']['checkedEmail'] = 'TextField';
 if ($GLOBALS['TL_CONFIG']['checkedEmailForMembers'])
 {
-	$GLOBALS['BE_FFL']['checkedEmail'] = 'CheckedEmail';
-	$GLOBALS['TL_HOOKS']['parseTemplate'][] = array('CheckedEmailHookImpl', 'parseTemplate');
+	$GLOBALS['BE_FFL']['checkedEmail']        = 'CheckedEmail';
+	$GLOBALS['TL_JAVASCRIPT']['checkedEmail'] = 'system/modules/CheckedEmail/assets/checkedEmail.js';
 }
 
 /**
