@@ -2,11 +2,11 @@
 Contao Extension "CheckedEmail"
 ===============================
 
-Version 2.0.0 (2019-12-0x)
+Version 2.0.0 (2019-12-04)
 --------------------------
 - Removes Contao 3 compatibility
-- Fixes appearance in backeend
-- Adds that if the values are not identical after the validation the original value is entered again in the first field
+- Fixes appearance in backend (see #5)
+- Adds that, if the values are not identical after the validation, the original value is entered again in the first field
 
 Version 1.3.1 (2018-03-14)
 --------------------------
