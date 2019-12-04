@@ -21,25 +21,15 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2012-2019
+ * @copyright  Cliff Parnitzky 2019-2019
  * @author     Cliff Parnitzky
  * @package    CheckedEmail
  * @license    LGPL
  */
-
+ 
 /**
- * Back end form fields
+ * Form fields
  */
-$GLOBALS['BE_FFL']['checkedEmail'] = 'TextField';
-if ($GLOBALS['TL_CONFIG']['checkedEmailForMembers'])
-{
-	$GLOBALS['BE_FFL']['checkedEmail']        = 'CheckedEmail';
-	$GLOBALS['TL_JAVASCRIPT']['checkedEmail'] = 'system/modules/CheckedEmail/assets/checkedEmail.js';
-}
-
-/**
- * Front end form fields
- */
-$GLOBALS['TL_FFL']['checkedEmail'] = 'FormCheckedEmail';
+$GLOBALS['TL_LANG']['tl_member']['email_confirm'] = array('E-mail address confirmation', 'Please confirm the e-mail address.');
 
 ?>

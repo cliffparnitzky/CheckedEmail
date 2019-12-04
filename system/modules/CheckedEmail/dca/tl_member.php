@@ -2,7 +2,7 @@
 
 /**
  * Contao Open Source CMS
- * Copyright (C)  2005-2016 Leo Feyer
+ * Copyright (C)  2005-2019 Leo Feyer
  *
  * Formerly known as TYPOlight Open Source CMS.
  *
@@ -21,7 +21,7 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2012-2016
+ * @copyright  Cliff Parnitzky 2012-2019
  * @author     Cliff Parnitzky
  * @package    CheckedEmail
  * @license    LGPL
@@ -33,6 +33,7 @@
 if ($GLOBALS['TL_CONFIG']['checkedEmailForMembers'])
 {
 	$GLOBALS['TL_DCA']['tl_member']['fields']['email']['inputType'] = "checkedEmail";
+	$GLOBALS['TL_DCA']['tl_member']['fields']['email']['eval']['tl_class'] = "clr checkedEmail";
 }
 
 ?>
