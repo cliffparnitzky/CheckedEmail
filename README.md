@@ -34,3 +34,9 @@ Dependency
 ----------
 
 There are no dependencies to other extensions, that have to be installed.
+
+
+THANK YOU
+---------
+
+- Webdesign Maren Lange (@mlwebworker) for the support of development and bug fixing
