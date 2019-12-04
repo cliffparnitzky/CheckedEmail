@@ -3,10 +3,19 @@
 /**
  * Contao Open Source CMS
  *
- * Copyright (c) 2005-2016 Leo Feyer
+ * Copyright (c) 2005-2019 Leo Feyer
  *
  * @license LGPL-3.0+
  */
+
+
+/**
+ * Register the namespaces
+ */
+ClassLoader::addNamespaces(array
+(
+	'CliffParnitzky',
+));
 
 
 /**
@@ -15,7 +24,10 @@
 ClassLoader::addClasses(array
 (
 	// Forms
-	'FormCheckedEmail' => 'system/modules/CheckedEmail/forms/FormCheckedEmail.php',
+	'CliffParnitzky\FormCheckedEmail' => 'system/modules/CheckedEmail/forms/FormCheckedEmail.php',
+
+	// Widgets                        
+	'CliffParnitzky\CheckedEmail'     => 'system/modules/CheckedEmail/widgets/CheckedEmail.php',
 ));
 
 
@@ -24,5 +36,6 @@ ClassLoader::addClasses(array
  */
 TemplateLoader::addFiles(array
 (
-	'form_checkedEmail' => 'system/modules/CheckedEmail/templates',
+	'be_widget_checkedEmail' => 'system/modules/CheckedEmail/templates/backend',
+	'form_checkedEmail'      => 'system/modules/CheckedEmail/templates/forms',
 ));
