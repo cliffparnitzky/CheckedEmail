@@ -2,6 +2,10 @@
 Contao Extension "CheckedEmail"
 ===============================
 
+Version 2.0.1 (2019-12-16)
+--------------------------
+- Fixes only adding javascript in backend (see #6)
+
 Version 2.0.0 (2019-12-04)
 --------------------------
 - Removes Contao 3 compatibility
