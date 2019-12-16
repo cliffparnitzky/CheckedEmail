@@ -31,10 +31,10 @@
  * Back end form fields
  */
 $GLOBALS['BE_FFL']['checkedEmail'] = 'TextField';
-if ($GLOBALS['TL_CONFIG']['checkedEmailForMembers'])
+if ($GLOBALS['TL_CONFIG']['checkedEmailForMembers'] && TL_MODE == 'BE')
 {
-	$GLOBALS['BE_FFL']['checkedEmail']        = 'CheckedEmail';
-	$GLOBALS['TL_JAVASCRIPT']['checkedEmail'] = 'system/modules/CheckedEmail/assets/checkedEmail.js';
+  $GLOBALS['BE_FFL']['checkedEmail']        = 'CheckedEmail';
+  $GLOBALS['TL_JAVASCRIPT']['checkedEmail'] = 'system/modules/CheckedEmail/assets/checkedEmail.js';
 }
 
 /**
