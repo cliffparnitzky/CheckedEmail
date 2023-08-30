@@ -2,6 +2,10 @@
 Contao Extension "CheckedEmail"
 ===============================
 
+Version 2.1.0 (2023-09-xx)
+--------------------------
+- Fixes problem with missing `form_row_double` template (see #9)
+
 Version 2.0.1 (2019-12-16)
 --------------------------
 - Fixes only adding javascript in backend (see #6)
