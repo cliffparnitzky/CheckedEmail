@@ -38,4 +38,5 @@ TemplateLoader::addFiles(array
 (
 	'be_widget_checkedEmail' => 'system/modules/CheckedEmail/templates/backend',
 	'form_checkedEmail'      => 'system/modules/CheckedEmail/templates/forms',
+	'form_row_double'      => 'system/modules/CheckedEmail/templates/forms',
 ));
