@@ -138,7 +138,7 @@ class FormCheckedEmail extends Widget
 			$this->addError($GLOBALS['TL_LANG']['ERR']['CheckedEmailError']);
 		}
 
-		$varInput = $this->idnaEncodeEmail($varInput);
+		$varInput = Idna::encodeEmail($varInput);
 		$varInput = parent::validator($varInput);
 
 		if (!$this->hasErrors())
@@ -172,7 +172,7 @@ class FormCheckedEmail extends Widget
 	public function generate()
 	{
 		// Hide the Punycode format (see #2750)
-		$this->varValue = $this->idnaDecode($this->varValue);
+		$this->varValue = Idna::decode($this->varValue);
 		
 		return sprintf(
 			'<input type="email" name="%s" id="ctrl_%s" class="tl_text%s" value="%s"%s onfocus="Backend.getScrollOffset()">%s%s',
@@ -211,7 +211,7 @@ class FormCheckedEmail extends Widget
 	public function generateConfirmation()
 	{
 		// Hide the Punycode format (see #2750)
-		$this->varValue = $this->idnaDecode($this->varValue);
+		$this->varValue = Idna::decode($this->varValue);
 		
 		return sprintf(
 			'<input type="email" name="%s_confirm" id="ctrl_%s_confirm" class="tl_text confirm%s" value="%s"%s onfocus="Backend.getScrollOffset()">%s',
