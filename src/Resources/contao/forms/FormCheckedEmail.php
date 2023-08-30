@@ -31,6 +31,7 @@
 namespace CliffParnitzky;
 
 use Contao\Config;
+use Contao\Idna;
 use Contao\StringUtil;
 use Contao\Widget;
 
