@@ -1,6 +1,4 @@
-<?php $this->extend('form_row_double'); ?>
-
-<?php $this->block('label'); ?>
+<div class="<?= $this->prefix ?><?php if ($this->class): ?> <?= $this->class ?><?php endif; ?>">
   <?php if ($this->label): ?>
     <label for="ctrl_<?= $this->id ?>"<?php if ($this->class): ?> class="<?= $this->class ?>"<?php endif; ?>>
       <?php if ($this->mandatory): ?>
@@ -10,17 +8,16 @@
       <?php endif; ?>
     </label>
   <?php endif; ?>
-<?php $this->endblock(); ?>
 
-<?php $this->block('field'); ?>
   <?php if ($this->hasErrors()): ?>
     <p class="error"><?= $this->getErrorAsString() ?></p>
   <?php endif; ?>
 
-  <input type="email" name="<?= $this->name ?>" id="ctrl_<?= $this->id ?>" class="text<?php if ($this->class): ?> <?= $this->class ?><?php endif; ?>" value="<?= specialchars($this->value) ?>"<?= $this->getAttributes() ?>>
-<?php $this->endblock(); ?>
+  <input type="email" name="<?= $this->name ?>" id="ctrl_<?= $this->id ?>" class="text<?php if ($this->class): ?> <?= $this->class ?><?php endif; ?>" value="<?= Contao\StringUtil::specialchars($this->value) ?>"<?= $this->getAttributes() ?>>
+</div>
 
-<?php $this->block('label2'); ?>
+
+<div class="<?= $this->prefix ?> confirm<?php if ($this->class): ?> <?= $this->class ?><?php endif; ?>">
   <?php if ($this->confirmLabel): ?>
     <label for="ctrl_<?= $this->id ?>_confirm" class="confirm<?php if ($this->class): ?> <?= $this->class ?><?php endif; ?>">
       <?php if ($this->mandatory): ?>
@@ -30,8 +27,6 @@
       <?php endif; ?>
     </label>
   <?php endif; ?>
-<?php $this->endblock(); ?>
 
-<?php $this->block('field2'); ?>
   <input type="email" name="<?= $this->name ?>_confirm" id="ctrl_<?= $this->id ?>_confirm" class="text<?php if ($this->class): ?> <?= $this->class ?><?php endif; ?>" value=""<?= $this->getAttributes() ?>>
-<?php $this->endblock(); ?>
+</div>
