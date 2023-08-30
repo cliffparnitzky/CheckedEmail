@@ -33,13 +33,13 @@
 $GLOBALS['BE_FFL']['checkedEmail'] = 'TextField';
 if ($GLOBALS['TL_CONFIG']['checkedEmailForMembers'] && TL_MODE == 'BE')
 {
-  $GLOBALS['BE_FFL']['checkedEmail']        = 'CheckedEmail';
-  $GLOBALS['TL_JAVASCRIPT']['checkedEmail'] = 'system/modules/CheckedEmail/assets/checkedEmail.js';
+  $GLOBALS['BE_FFL']['checkedEmail']        = 'CliffParnitzky\CheckedEmail';
+  $GLOBALS['TL_JAVASCRIPT']['checkedEmail'] = 'bundles/cliffparnitzkyformcheckedemail/checkedEmail.js';
 }
 
 /**
  * Front end form fields
  */
-$GLOBALS['TL_FFL']['checkedEmail'] = 'FormCheckedEmail';
+$GLOBALS['TL_FFL']['checkedEmail'] = 'CliffParnitzky\FormCheckedEmail';
 
 ?>
