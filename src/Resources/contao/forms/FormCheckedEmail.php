@@ -2,7 +2,7 @@
 
 /**
  * Contao Open Source CMS
- * Copyright (C)  2005-2019 Leo Feyer
+ * Copyright (C)  2005-2023 Leo Feyer
  *
  * Formerly known as TYPOlight Open Source CMS.
  *
@@ -21,7 +21,7 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2012-2019
+ * @copyright  Cliff Parnitzky 2012-2023
  * @author     Cliff Parnitzky
  * @package    CheckedEmail
  * @license    LGPL
@@ -39,7 +39,7 @@ use Contao\Widget;
  * Class FormCheckedEmail
  *
  * Form field "checkedEmail".
- * @copyright  Cliff Parnitzky 2012-2019
+ * @copyright  Cliff Parnitzky 2012-2023
  * @author     Cliff Parnitzky
  * @package    Forms
  */
@@ -69,13 +69,13 @@ class FormCheckedEmail extends Widget
 	 *
 	 * @var string
 	 */
-	protected $strPrefix = 'widget widget-text widget-checked-email'; 
+	protected $strPrefix = 'widget widget-text widget-checked-email';
 
 	/**
 	 * Always decode entities
 	 * @param array
 	 */
-	public function __construct($arrAttributes=false)
+	public function __construct($arrAttributes = false)
 	{
 		parent::__construct($arrAttributes);
 		$this->decodeEntities = true;
@@ -96,8 +96,8 @@ class FormCheckedEmail extends Widget
 				{
 					$this->arrAttributes['maxlength'] = $varValue;
 				}
-				break; 
-			
+				break;
+
 			case 'mandatory':
 				if ($varValue)
 				{
@@ -108,12 +108,12 @@ class FormCheckedEmail extends Widget
 					unset($this->arrAttributes['required']);
 				}
 				parent::__set($strKey, $varValue);
-				break; 
-			
+				break;
+
 			case 'placeholder':
 				$this->arrAttributes['placeholder'] = $varValue;
 				break;
-			
+
 			default:
 				parent::__set($strKey, $varValue);
 				break;
@@ -128,12 +128,12 @@ class FormCheckedEmail extends Widget
 	protected function validator($varInput)
 	{
 		$this->blnSubmitInput = false;
-		
+
 		if (!strlen($varInput) && (strlen($this->varValue) || !$this->mandatory))
 		{
 			return '';
 		}
-		
+
 		if ($varInput != $this->getPost($this->strName . '_confirm'))
 		{
 			$this->addError($GLOBALS['TL_LANG']['ERR']['CheckedEmailError']);
@@ -145,12 +145,11 @@ class FormCheckedEmail extends Widget
 		if (!$this->hasErrors())
 		{
 			$this->blnSubmitInput = true;
-			
 		}
 
 		return $varInput;
 	}
-	
+
 	/**
 	 * Parse the template file and return it as string
 	 *
@@ -158,13 +157,16 @@ class FormCheckedEmail extends Widget
 	 *
 	 * @return string The template markup
 	 */
-	public function parse($arrAttributes=null)
+	public function parse($arrAttributes = null)
 	{
-		$this->confirmLabel = sprintf($GLOBALS['TL_LANG']['MSC']['CheckedEmailConfirmation'], $this->strLabel);
+		if (empty($this->confirmLabel))
+		{
+			$this->confirmLabel = sprintf($GLOBALS['TL_LANG']['MSC']['CheckedEmailConfirmation'], $this->strLabel);
+		}
 
 		return parent::parse($arrAttributes);
 	}
-	
+
 	/**
 	 * Generate the widget and return it as string
 	 *
@@ -174,7 +176,7 @@ class FormCheckedEmail extends Widget
 	{
 		// Hide the Punycode format (see #2750)
 		$this->varValue = Idna::decode($this->varValue);
-		
+
 		return sprintf(
 			'<input type="email" name="%s" id="ctrl_%s" class="tl_text%s" value="%s"%s onfocus="Backend.getScrollOffset()">%s%s',
 			$this->strName,
@@ -194,12 +196,17 @@ class FormCheckedEmail extends Widget
 	 */
 	public function generateConfirmationLabel()
 	{
+		if (empty($this->confirmLabel))
+		{
+			$this->confirmLabel = sprintf($GLOBALS['TL_LANG']['MSC']['CheckedEmailConfirmation'], $this->strLabel);
+		}
+
 		return sprintf(
 			'<label for="ctrl_%s_confirm" class="confirm%s">%s%s%s</label>',
 			$this->strId,
 			($this->strClass ? ' ' . $this->strClass : ''),
 			($this->mandatory ? '<span class="invisible">' . $GLOBALS['TL_LANG']['MSC']['mandatory'] . ' </span>' : ''),
-			sprintf($GLOBALS['TL_LANG']['MSC']['CheckedEmailConfirmation'], $this->strLabel),
+			$this->confirmLabel,
 			($this->mandatory ? '<span class="mandatory">*</span>' : '')
 		);
 	}
@@ -213,7 +220,7 @@ class FormCheckedEmail extends Widget
 	{
 		// Hide the Punycode format (see #2750)
 		$this->varValue = Idna::decode($this->varValue);
-		
+
 		return sprintf(
 			'<input type="email" name="%s_confirm" id="ctrl_%s_confirm" class="tl_text confirm%s" value="%s"%s onfocus="Backend.getScrollOffset()">%s',
 			$this->strName,
@@ -225,5 +232,3 @@ class FormCheckedEmail extends Widget
 		);
 	}
 }
-
-?>
