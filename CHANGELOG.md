@@ -2,9 +2,10 @@
 Contao Extension "CheckedEmail"
 ===============================
 
-Version 2.1.0 (2023-09-xx)
+Version 2.1.0 (2023-08-31)
 --------------------------
-- Fixes problem with missing `form_row_double` template (see #9)
+- Adds Contao 4.13.x / 5.2.x compatibility (see #9)
+- Adds the possibility to define a custom label for the confirmation field (see #8)
 
 Version 2.0.1 (2019-12-16)
 --------------------------
