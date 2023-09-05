@@ -31,7 +31,7 @@
  * Back end form fields
  */
 $GLOBALS['BE_FFL']['checkedEmail'] = 'TextField';
-if ($GLOBALS['TL_CONFIG']['checkedEmailForMembers'] && TL_MODE == 'BE')
+if (array_key_exists("checkedEmailForMembers", $GLOBALS['TL_CONFIG']) && $GLOBALS['TL_CONFIG']['checkedEmailForMembers'] && TL_MODE == 'BE')
 {
   $GLOBALS['BE_FFL']['checkedEmail']        = 'CliffParnitzky\CheckedEmail';
   $GLOBALS['TL_JAVASCRIPT']['checkedEmail'] = 'bundles/cliffparnitzkyformcheckedemail/checkedEmail.js';
