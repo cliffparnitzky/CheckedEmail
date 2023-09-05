@@ -2,6 +2,11 @@
 Contao Extension "CheckedEmail"
 ===============================
 
+Version 2.1.1 (2023-09-05)
+--------------------------
+- Fixes PHP warning if `checkedEmailForMembers` is not set (see #10)
+
+
 Version 2.1.0 (2023-08-31)
 --------------------------
 - Adds Contao 4.13.x / 5.2.x compatibility (see #9)
