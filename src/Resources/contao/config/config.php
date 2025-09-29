@@ -2,7 +2,7 @@
 
 /**
  * Contao Open Source CMS
- * Copyright (C)  2005-2023 Leo Feyer
+ * Copyright (C)  2005-2025 Leo Feyer
  *
  * Formerly known as TYPOlight Open Source CMS.
  *
@@ -21,17 +21,24 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2012-2023
+ * @copyright  Cliff Parnitzky 2012-2025
  * @author     Cliff Parnitzky
  * @package    CheckedEmail
  * @license    LGPL
  */
 
+use Contao\System;
+
 /**
  * Back end form fields
  */
 $GLOBALS['BE_FFL']['checkedEmail'] = 'TextField';
-if (array_key_exists("checkedEmailForMembers", $GLOBALS['TL_CONFIG']) && $GLOBALS['TL_CONFIG']['checkedEmailForMembers'] && TL_MODE == 'BE')
+
+$request = System::getContainer()->get('request_stack')->getCurrentRequest();
+
+if (array_key_exists("checkedEmailForMembers", $GLOBALS['TL_CONFIG']) && 
+	  $GLOBALS['TL_CONFIG']['checkedEmailForMembers'] && 
+	  ($request && System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest($request)))
 {
   $GLOBALS['BE_FFL']['checkedEmail']        = 'CliffParnitzky\CheckedEmail';
   $GLOBALS['TL_JAVASCRIPT']['checkedEmail'] = 'bundles/cliffparnitzkyformcheckedemail/checkedEmail.js';
