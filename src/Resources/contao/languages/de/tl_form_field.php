@@ -2,7 +2,7 @@
 
 /**
  * Contao Open Source CMS
- * Copyright (C)  2005-2023 Leo Feyer
+ * Copyright (C)  2005-2025 Leo Feyer
  *
  * Formerly known as TYPOlight Open Source CMS.
  *
@@ -21,7 +21,7 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2012-2023
+ * @copyright  Cliff Parnitzky 2012-2025
  * @author     Cliff Parnitzky
  * @package    CheckedEmail
  * @license    LGPL
@@ -35,4 +35,5 @@ $GLOBALS['TL_LANG']['FFL']['checkedEmail'] = array('E-Mail mit Bestätigung', 'S
 /**
  * DCA fields
  */
-$GLOBALS['TL_LANG']['tl_form_field']['confirmLabel'] = array('Bezeichnung Bestätigungsfeld', 'Die Bezeichnung für das Bestätigungsfeld wird auf der Webseite angezeigt, normalerweise links neben oder oberhalb des Feldes.');
+$GLOBALS['TL_LANG']['tl_form_field']['confirmLabel']     = array('Bezeichnung Bestätigungsfeld', 'Die Bezeichnung für das Bestätigungsfeld wird auf der Webseite angezeigt, normalerweise links neben oder oberhalb des Feldes.');
+$GLOBALS['TL_LANG']['tl_form_field']['disableCopyPaste'] = array('Kopieren & Einfügen verbieten', 'Das Kopieren und Einfügen von Werten in die Felder verbieten.');
