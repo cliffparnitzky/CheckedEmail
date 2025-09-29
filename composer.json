@@ -1,7 +1,14 @@
 {
 	"name":"cliffparnitzky/checked-email",
 	"description":"Provides two textfields for forms for double entering a e-mail address and checking for equality. Also adds the option to activate e-mail field with confirmation for members (affects among others the modules `Personal data` and `Registration`).",
-	"keywords":["contao", "form", "form field", "e-mail", "e-mail address", "check for equality"],
+	"keywords":[
+		"contao",
+		"form",
+		"form field",
+		"e-mail",
+		"e-mail address",
+		"check for equality"
+	],
 	"type":"contao-bundle",
 	"license":"LGPL-3.0-or-later",
 	"authors":[
@@ -17,8 +24,11 @@
 		"source":"https://github.com/cliffparnitzky/CheckedEmail"
 	},
 	"require":{
-		"php":">=7.4",
-		"contao/core-bundle":"~4.13 || ~5.2"
+		"php": "^8.1",
+		"contao/core-bundle": "^5.3"
+	},
+	"require-dev": {
+		"contao/manager-plugin": "^2.12"
 	},
 	"autoload": {
 		"psr-4": {
@@ -33,12 +43,14 @@
 			"src/Resources/contao/languages/"
 		]
 	},
-	"extra":{
-		"contao-manager-plugin": "CliffParnitzky\\FormCheckedEmailBundle\\ContaoManager\\Plugin",
-		"branch-alias": {
-			"dev-master": "2.1.x-dev"
+	"config": {
+		"allow-plugins": {
+			"contao-components/installer": false,
+			"contao/manager-plugin": false,
+			"contao-community-alliance/composer-plugin": true
 		}
 	},
-	"prefer-stable": true,
-	"minimum-stability": "dev"
+	"extra":{
+		"contao-manager-plugin": "CliffParnitzky\\FormCheckedEmailBundle\\ContaoManager\\Plugin"
+	}
 }
