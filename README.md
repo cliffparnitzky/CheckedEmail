@@ -27,8 +27,7 @@ https://github.com/cliffparnitzky/CheckedEmail/issues
 Compatibility
 -------------
 
-- Contao version >= 4.13.0
-- Contao version >= 5.2.0
+- Contao version >= 5.3.0
 
 
 Dependency
